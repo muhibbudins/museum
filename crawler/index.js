@@ -138,7 +138,7 @@ const fetchURL = async (url, browser) => {
   
     // Disable writing new dictionary.json
     // fs.writeFileSync(
-    //   './dictionary.json', JSON.stringify(content, null, 2)
+    //   '../source/dictionary.json', JSON.stringify(content, null, 2)
     // )
   
     process.exit(0)
