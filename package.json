@@ -1,14 +1,11 @@
 {
   "name": "cronodile",
   "version": "1.0.0",
-  "description": "",
+  "description": "Create crontab using Node and with humand readable command",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Muhibbudin Suretno <muhibbudinsuretno1@gmail.com>",
+  "license": "MIT",
   "dependencies": {
     "node-cron": "^2.0.3"
   }
