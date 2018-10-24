@@ -97,30 +97,15 @@ const source = [
   'every year'
 ]
 
-const test = [
-  'every 2 minutes',
-  'every 6 minutes',
-  'every 20 minutes',
-  'every 1 hour',
-  'every 4 hours',
-  'hour range',
-  'between certain hours',
-  'every day',
-  'every sunday',
-  'every friday at midnight',
-  'every weekday'
-]
-
 const fetchURL = async (url, browser) => {
   const page = await browser.newPage()
 
-  await page.goto(`https://crontab.guru/${url.replace(' ', '-')}`, {
+  await page.goto(`https://crontab.guru/${url.replace(/ /g, '-')}`, {
     timeout: 0
   })
 
-  return await page.evaluate(() => {
+  const content = await page.evaluate(async () => {
     const key = window.location.pathname.replace('/', '').replace(/ |%20/g, '-')
-
     const bracket = {}
     
     bracket[key] = {
@@ -130,21 +115,24 @@ const fetchURL = async (url, browser) => {
 
     return bracket
   })
+
+  page.close()
+
+  return content
 }
 
 (async () => {
   const browser = await puppet.launch()
 
-  Promise.all(test.map(async (url) => {
+  Promise.all(source.map(async (url) => {
     return await fetchURL(url, browser)
   })).then(result => {
-    browser.close()
-  
     const content = {}
-  
+
+    browser.close()  
+
     result.map(crontab => {
       const key = Object.keys(crontab).pop()
-  
       content[key] = crontab[key]
     })
   

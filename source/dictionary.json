@@ -4,140 +4,140 @@
     "value": "* * * * *"
   },
   "every-1-minute": {
-    "text": "At 04:05",
-    "value": "5 4 * * *"
+    "text": "At every minute",
+    "value": "* * * * *"
   },
   "every-2-minutes": {
-    "text": "At 04:05",
-    "value": "5 4 * * *"
+    "text": "At every 2nd minute",
+    "value": "*/2 * * * *"
   },
   "every-even-minute": {
-    "text": "At 04:05",
-    "value": "5 4 * * *"
+    "text": "At every 2nd minute",
+    "value": "*/2 * * * *"
   },
   "every-uneven-minute": {
-    "text": "At 04:05",
-    "value": "5 4 * * *"
+    "text": "At every 2nd minute from 1 through 59",
+    "value": "1-59/2 * * * *"
   },
   "every-3-minutes": {
-    "text": "At 04:05",
-    "value": "5 4 * * *"
+    "text": "At every 3rd minute",
+    "value": "*/3 * * * *"
   },
   "every-4-minutes": {
-    "text": "At 04:05",
-    "value": "5 4 * * *"
+    "text": "At every 4th minute",
+    "value": "*/4 * * * *"
   },
   "every-5-minutes": {
-    "text": "At 04:05",
-    "value": "5 4 * * *"
+    "text": "At every 5th minute",
+    "value": "*/5 * * * *"
   },
   "every-five-minutes": {
-    "text": "At 04:05",
-    "value": "5 4 * * *"
+    "text": "At every 5th minute",
+    "value": "*/5 * * * *"
   },
   "every-6-minutes": {
-    "text": "At 04:05",
-    "value": "5 4 * * *"
+    "text": "At every 6th minute",
+    "value": "*/6 * * * *"
   },
   "every-10-minutes": {
-    "text": "At 04:05",
-    "value": "5 4 * * *"
+    "text": "At every 10th minute",
+    "value": "*/10 * * * *"
   },
   "every-15-minutes": {
-    "text": "At 04:05",
-    "value": "5 4 * * *"
+    "text": "At every 15th minute",
+    "value": "*/15 * * * *"
   },
   "every-fifteen-minutes": {
-    "text": "At 04:05",
-    "value": "5 4 * * *"
+    "text": "At every 15th minute",
+    "value": "*/15 * * * *"
   },
   "every-ten-minutes": {
-    "text": "At 04:05",
-    "value": "5 4 * * *"
+    "text": "At every 10th minute",
+    "value": "*/10 * * * *"
   },
   "every-quarter-hour": {
-    "text": "At 04:05",
-    "value": "5 4 * * *"
+    "text": "At every 15th minute",
+    "value": "*/15 * * * *"
   },
   "every-20-minutes": {
-    "text": "At 04:05",
-    "value": "5 4 * * *"
+    "text": "At every 20th minute",
+    "value": "*/20 * * * *"
   },
   "every-30-minutes": {
-    "text": "At 04:05",
-    "value": "5 4 * * *"
+    "text": "At every 30th minute",
+    "value": "*/30 * * * *"
   },
   "every-hour-at-30-minutes": {
-    "text": "At 04:05",
-    "value": "5 4 * * *"
+    "text": "At minute 30",
+    "value": "30 * * * *"
   },
   "every-half-hour": {
-    "text": "At 04:05",
-    "value": "5 4 * * *"
+    "text": "At every 30th minute",
+    "value": "*/30 * * * *"
   },
   "every-60-minutes": {
-    "text": "At 04:05",
-    "value": "5 4 * * *"
+    "text": "At minute 0",
+    "value": "0 * * * *"
   },
   "every-hour": {
     "text": "At minute 0",
     "value": "0 * * * *"
   },
   "every-1-hour": {
-    "text": "At 04:05",
-    "value": "5 4 * * *"
+    "text": "At minute 0",
+    "value": "0 * * * *"
   },
   "every-2-hours": {
-    "text": "At 04:05",
-    "value": "5 4 * * *"
+    "text": "At minute 0 past every 2nd hour",
+    "value": "0 */2 * * *"
   },
   "every-two-hours": {
-    "text": "At 04:05",
-    "value": "5 4 * * *"
+    "text": "At minute 0 past every 2nd hour",
+    "value": "0 */2 * * *"
   },
   "every-even-hour": {
-    "text": "At 04:05",
-    "value": "5 4 * * *"
+    "text": "At minute 0 past every 2nd hour",
+    "value": "0 */2 * * *"
   },
   "every-other-hour": {
-    "text": "At 04:05",
-    "value": "5 4 * * *"
+    "text": "At minute 0 past every 2nd hour",
+    "value": "0 */2 * * *"
   },
   "every-3-hours": {
-    "text": "At 04:05",
-    "value": "5 4 * * *"
+    "text": "At minute 0 past every 3rd hour",
+    "value": "0 */3 * * *"
   },
   "every-three-hours": {
-    "text": "At 04:05",
-    "value": "5 4 * * *"
+    "text": "At minute 0 past every 3rd hour",
+    "value": "0 */3 * * *"
   },
   "every-4-hours": {
-    "text": "At 04:05",
-    "value": "5 4 * * *"
+    "text": "At minute 0 past every 4th hour",
+    "value": "0 */4 * * *"
   },
   "every-6-hours": {
-    "text": "At 04:05",
-    "value": "5 4 * * *"
+    "text": "At minute 0 past every 6th hour",
+    "value": "0 */6 * * *"
   },
   "every-six-hours": {
-    "text": "At 04:05",
-    "value": "5 4 * * *"
+    "text": "At minute 0 past every 6th hour",
+    "value": "0 */6 * * *"
   },
   "every-8-hours": {
-    "text": "At 04:05",
-    "value": "5 4 * * *"
+    "text": "At minute 0 past every 8th hour",
+    "value": "0 */8 * * *"
   },
   "every-12-hours": {
-    "text": "At 04:05",
-    "value": "5 4 * * *"
+    "text": "At minute 0 past every 12th hour",
+    "value": "0 */12 * * *"
   },
   "hour-range": {
     "text": "At minute 0 past every hour from 9 through 17",
     "value": "0 9-17 * * *"
   },
   "between-certain-hours": {
-    "text": "At 04:05",
-    "value": "5 4 * * *"
+    "text": "At minute 0 past every hour from 9 through 17",
+    "value": "0 9-17 * * *"
   },
   "every-day": {
     "text": "At 00:00",
@@ -148,24 +148,24 @@
     "value": "0 0 * * *"
   },
   "once-a-day": {
-    "text": "At 04:05",
-    "value": "5 4 * * *"
+    "text": "At 00:00",
+    "value": "0 0 * * *"
   },
   "every-night": {
     "text": "At 00:00",
     "value": "0 0 * * *"
   },
   "every-day-at-1am": {
-    "text": "At 04:05",
-    "value": "5 4 * * *"
+    "text": "At 01:00",
+    "value": "0 1 * * *"
   },
   "every-day-at-2am": {
-    "text": "At 04:05",
-    "value": "5 4 * * *"
+    "text": "At 02:00",
+    "value": "0 2 * * *"
   },
   "every-day-8am": {
-    "text": "At 04:05",
-    "value": "5 4 * * *"
+    "text": "At 08:00",
+    "value": "0 8 * * *"
   },
   "every-morning": {
     "text": "At 09:00",
@@ -176,12 +176,12 @@
     "value": "0 0 * * *"
   },
   "every-day-at-midnight": {
-    "text": "At 04:05",
-    "value": "5 4 * * *"
+    "text": "At 00:00",
+    "value": "0 0 * * *"
   },
   "every-night-at-midnight": {
-    "text": "At 04:05",
-    "value": "5 4 * * *"
+    "text": "At 00:00",
+    "value": "0 0 * * *"
   },
   "every-sunday": {
     "text": "At 00:00 on Sunday",
@@ -208,8 +208,8 @@
     "value": "0 0 * * FRI"
   },
   "every-friday-at-midnight": {
-    "text": "At 04:05",
-    "value": "5 4 * * *"
+    "text": "At 00:00 on Friday",
+    "value": "0 0 * * FRI"
   },
   "every-saturday": {
     "text": "At 00:00 on Saturday",
@@ -224,8 +224,8 @@
     "value": "0 0 * * 1-5"
   },
   "monday-to-friday": {
-    "text": "At 04:05",
-    "value": "5 4 * * *"
+    "text": "At 00:00 on every day-of-week from Monday through Friday",
+    "value": "0 0 * * 1-5"
   },
   "every-weekend": {
     "text": "At 00:00 on Saturday and Sunday",
@@ -236,8 +236,8 @@
     "value": "0 0 * * 6,0"
   },
   "every-7-days": {
-    "text": "At 04:05",
-    "value": "5 4 * * *"
+    "text": "At 00:00 on Sunday",
+    "value": "0 0 * * 0"
   },
   "every-week": {
     "text": "At 00:00 on Sunday",
@@ -248,8 +248,8 @@
     "value": "0 0 * * 0"
   },
   "once-a-week": {
-    "text": "At 04:05",
-    "value": "5 4 * * *"
+    "text": "At 00:00 on Sunday",
+    "value": "0 0 * * 0"
   },
   "every-month": {
     "text": "At 00:00 on day-of-month 1",
@@ -260,20 +260,20 @@
     "value": "0 0 1 * *"
   },
   "once-a-month": {
-    "text": "At 04:05",
-    "value": "5 4 * * *"
+    "text": "At 00:00 on day-of-month 1",
+    "value": "0 0 1 * *"
   },
   "every-other-month": {
-    "text": "At 04:05",
-    "value": "5 4 * * *"
+    "text": "At 00:00 on day-of-month 1 in every 2nd month",
+    "value": "0 0 1 */2 *"
   },
   "every-quarter": {
     "text": "At 00:00 on day-of-month 1 in every 3rd month",
     "value": "0 0 1 */3 *"
   },
   "every-6-months": {
-    "text": "At 04:05",
-    "value": "5 4 * * *"
+    "text": "At 00:00 on day-of-month 1 in every 6th month",
+    "value": "0 0 1 */6 *"
   },
   "every-year": {
     "text": "At 00:00 on day-of-month 1 in January",
