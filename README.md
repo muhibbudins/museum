@@ -14,16 +14,17 @@ And then, create code like this
 
 ```js
 // Import Cronodile
-const Cronodile = require('./')
-// Initialize Cronodile
+const Cronodile = require('cronodile')
+// Create Cronodile instance
 const cron = new Cronodile('id')
 
 cron
   // Command must be Function
   .command(() => {
+    // Write your code here
     console.log('run your function / something here')
   })
-  // Run must be string and available on time table
+  // Run parameter must be a string
   .run('setiap menit')
 ```
 
