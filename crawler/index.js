@@ -27,74 +27,7 @@ const puppet = require('puppeteer')
 const string = [
   'every minute',
   'every 1 minute',
-  'every 2 minutes',
-  'every even minute',
-  'every uneven minute',
-  'every 3 minutes',
-  'every 4 minutes',
-  'every 5 minutes',
-  'every five minutes',
-  'every 6 minutes',
-  'every 10 minutes',
-  'every 15 minutes',
-  'every fifteen minutes',
-  'every ten minutes',
-  'every quarter hour',
-  'every 20 minutes',
-  'every 30 minutes',
-  'every hour at 30 minutes',
-  'every half hour',
-  'every 60 minutes',
-  'every hour',
-  'every 1 hour',
-  'every 2 hours',
-  'every two hours',
-  'every even hour',
-  'every other hour',
-  'every 3 hours',
-  'every three hours',
-  'every 4 hours',
-  'every 6 hours',
-  'every six hours',
-  'every 8 hours',
-  'every 12 hours',
-  'hour range',
-  'between certain hours',
-  'every day',
-  'daily',
-  'once a day',
-  'every night',
-  'every day at 1am',
-  'every day at 2am',
-  'every day 8am',
-  'every morning',
-  'every midnight',
-  'every day at midnight',
-  'every night at midnight',
-  'every sunday',
-  'every monday',
-  'every tuesday',
-  'every wednesday',
-  'every thursday',
-  'every friday',
-  'every friday at midnight',
-  'every saturday',
-  'every weekday',
-  'weekdays only',
-  'monday to friday',
-  'every weekend',
-  'weekends only',
-  'every 7 days',
-  'every week',
-  'weekly',
-  'once a week',
-  'every month',
-  'monthly',
-  'once a month',
-  'every other month',
-  'every quarter',
-  'every 6 months',
-  'every year'
+  'every 2 minutes'
 ]
 
 const fetchURL = async (url, browser) => {
@@ -106,14 +39,12 @@ const fetchURL = async (url, browser) => {
 
   return await page.evaluate(() => {
     const key = window.location.pathname.replace('/', '').replace(/ |%20/g, '-')
-    const text = document.getElementById('hr').innerText.replace(/“|”|\./g, '')
-    const value = document.getElementById('input').value
 
     const bracket = {}
     
     bracket[key] = {
-      text: text,
-      value: value
+      text: document.getElementById('hr').innerText.replace(/“|”|\./g, ''),
+      value: document.getElementById('input').value
     }
 
     return bracket
@@ -137,9 +68,9 @@ const fetchURL = async (url, browser) => {
     })
   
     // Disable writing new dictionary.json
-    // fs.writeFileSync(
-    //   '../source/dictionary.json', JSON.stringify(content, null, 2)
-    // )
+    fs.writeFileSync(
+      '../source/dictionary.json', JSON.stringify(content, null, 2)
+    )
   
     process.exit(0)
   })
