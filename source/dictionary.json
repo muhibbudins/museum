@@ -1,4 +1,24 @@
 {
+  "every-second": {
+    "text": "At every second",
+    "value": "* * * * * *"
+  },
+  "every-even-second": {
+    "text": "At every 2nd second",
+    "value": "*/2 * * * * *"
+  },
+  "every-odd-second": {
+    "text": "At every 2nd second from 1 through 59",
+    "value": "1-59/2 * * * * *"
+  },
+  "every-10-seconds": {
+    "text": "At every 10 seconds",
+    "value": "10 * * * * *"
+  },
+  "every-30-seconds": {
+    "text": "At every 30 seconds",
+    "value": "30 * * * * *"
+  },
   "every-minute": {
     "text": "At every minute",
     "value": "* * * * *"
@@ -15,7 +35,7 @@
     "text": "At every 2nd minute",
     "value": "*/2 * * * *"
   },
-  "every-uneven-minute": {
+  "every-odd-minute": {
     "text": "At every 2nd minute from 1 through 59",
     "value": "1-59/2 * * * *"
   },
