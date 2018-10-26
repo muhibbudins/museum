@@ -1,14 +1,16 @@
-const cron = require('node-cron')
+const CronJob = require('cron').CronJob
 const dictionary = require('./source/dictionary.json')
 
 class Cronodile {
-  constructor(language) {
+  constructor(language, options) {
     try {
       this.meta = require(`./source/meta/${language || 'en'}.json`)
     } catch (error) {
       console.log('JSON file for meta language is not exist')
       process.exit(1)
     }
+
+    this.options = options
   }
 
   command(command) {
@@ -22,10 +24,10 @@ class Cronodile {
     if (this.meta[key]) {
       const crontab = dictionary[this.meta[key]]
 
-      cron.schedule(crontab['value'], () => {
+      new CronJob(crontab['value'], () => {
         console.log(`[Cronodile] Command ${crontab['text']} at ${new Date().toLocaleTimeString()}`)
         this.command()
-      })
+      }, null, true, this.options['timezone'])
     }
 
     return this
