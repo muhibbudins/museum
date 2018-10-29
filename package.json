@@ -1,6 +1,6 @@
 {
   "name": "cronodile",
-  "version": "1.0.0",
+  "version": "1.1.0-dev",
   "description": "Create crontab using Node and with humand readable command",
   "main": "index.js",
   "keywords": [],

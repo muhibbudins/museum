@@ -10,7 +10,11 @@ class Cronodile {
       process.exit(1)
     }
 
-    this.options = options
+    const config = {
+      timezone: 'Asia/Jakarta'
+    }
+
+    this.options = Object.assign(config, options)
   }
 
   command(command) {
