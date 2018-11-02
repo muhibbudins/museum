@@ -1,4 +1,4 @@
-# 🐊 Cronodile - WIP
+# 🐊 Cronodile
 
 Create cron using Node with human readable command
 
