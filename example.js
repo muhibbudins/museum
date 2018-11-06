@@ -1,19 +1,16 @@
 const Cronodile = require('./')
 
-const jobOne = new Cronodile('id')
-const jobTwo = new Cronodile('id')
+const jobOne = new Cronodile.create('id')
+const jobTwo = new Cronodile.create('id')
 
 jobOne
 	.command(() => {
-		console.log('[JOB1] run your command here')
+		console.log('[JOB1] run your command here ')
 	})
-	.run('setiap menit')
+	.run(Cronodile.time.EVERY_EVEN_SECOND)
 
-jobTwo.command(() => {
-		console.log('[JOB2] run your command here')
-	})
-	.run('setiap menit')
+jobTwo.fromFile('./example_file').run('setiap menit')
 
-// cron
-//   .fromFile('./example_file')
-//   .run('setiap menit')
+setTimeout(function() {
+	jobTwo.api.stop()
+}, 120000)
