@@ -1,5 +1,6 @@
 const CronJob = require('cron').CronJob
 const dictionary = require('./source/dictionary.json')
+const timeVariable = require('./source/variable')
 
 class Cronodile {
 	constructor(language, options) {
@@ -33,10 +34,10 @@ class Cronodile {
 	}
 
 	run(time) {
-		const key = time.replace(/ /g, '-')
+		const cronTime = (typeof time === "string") ? this.meta[time.replace(/ /g, '-')] : time
 
-		if (this.meta[key]) {
-			const cronCommand = dictionary[this.meta[key]]
+		if (cronTime) {
+			const cronCommand = (typeof time === "string") ? dictionary[cronTime] : cronTime
 			const cronFunction = () => {
 				console.log(`[Cronodile] Command ${cronCommand.text} at ${new Date().toLocaleTimeString()}`)
 				this.command()
@@ -49,4 +50,7 @@ class Cronodile {
 	}
 }
 
-module.exports = Cronodile
+module.exports = {
+	create: Cronodile,
+	time: timeVariable
+}
