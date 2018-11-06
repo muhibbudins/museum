@@ -2,40 +2,51 @@ const CronJob = require('cron').CronJob
 const dictionary = require('./source/dictionary.json')
 
 class Cronodile {
-  constructor(language, options) {
-    try {
-      this.meta = require(`./source/meta/${language || 'en'}.json`)
-    } catch (error) {
-      console.log('JSON file for meta language is not exist')
-      process.exit(1)
-    }
+	constructor(language, options) {
+		try {
+			this.meta = require(`./source/meta/${language || 'en'}.json`)
+		} catch (error) {
+			console.log('JSON file for meta language is not exist')
+			process.exit(1)
+		}
 
-    const config = {
-      timezone: 'Asia/Jakarta'
-    }
+		const config = {
+			timezone: 'Asia/Jakarta'
+		}
 
-    this.options = Object.assign(config, options)
-  }
+		this.options = Object.assign(config, options)
+	}
 
-  command(command) {
-    this.command = command
-    return this
-  }
+	fromFile(filePath) {
+		const file = require(filePath)
 
-  run(time) {
-    const key = time.replace(/ /g, '-')
+		if (typeof file === "undefined") throw new Error('Invalid file path')
+		if (typeof file !== "function") throw new Error('Invalid function')
 
-    if (this.meta[key]) {
-      const crontab = dictionary[this.meta[key]]
+		this.command = file
+		return this
+	}
 
-      new CronJob(crontab['value'], () => {
-        console.log(`[Cronodile] Command ${crontab['text']} at ${new Date().toLocaleTimeString()}`)
-        this.command()
-      }, null, true, this.options['timezone'])
-    }
+	command(command) {
+		this.command = command
+		return this
+	}
 
-    return this
-  }
+	run(time) {
+		const key = time.replace(/ /g, '-')
+
+		if (this.meta[key]) {
+			const cronCommand = dictionary[this.meta[key]]
+			const cronFunction = () => {
+				console.log(`[Cronodile] Command ${cronCommand.text} at ${new Date().toLocaleTimeString()}`)
+				this.command()
+			}
+
+			this.api = new CronJob(cronCommand.value, cronFunction, null, true, this.options['timezone'])
+		}
+
+		return this
+	}
 }
 
 module.exports = Cronodile
