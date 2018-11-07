@@ -2,15 +2,27 @@ const Cronodile = require('./')
 
 const jobOne = new Cronodile.create('id')
 const jobTwo = new Cronodile.create('id')
+const jobThree = new Cronodile.create('en')
 
 jobOne
-	.command(() => {
-		console.log('[JOB1] run your command here ')
+	.command(function() {
+		console.log('[Job 01] run your command here')
+
+		console.info(this.api.running) // true
 	})
-	.run(Cronodile.time.EVERY_EVEN_SECOND)
+	.run(Cronodile.time.EVERY_10_SECONDS)
 
-jobTwo.fromFile('./example_file').run('setiap menit')
+jobTwo
+	.command((api) => {
+		console.log('[Job 02] run your command here')
 
+		console.info(api.running) // true
+	})
+	.run(Cronodile.time.EVERY_10_SECONDS)
+
+jobThree.command('./example_file').run('every 10 seconds')
+
+// stop jobTwo after 20 seconds
 setTimeout(function() {
 	jobTwo.api.stop()
-}, 120000)
+}, 1000 * 20)
