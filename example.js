@@ -18,7 +18,7 @@ jobTwo
 
 		console.info(api.running) // true
 	})
-	.run(Cronodile.time.EVERY_10_SECONDS)
+	.run(Cronodile.time.EVERY_30_SECONDS)
 
 jobThree.command('./example_file').run('every 10 seconds')
 
