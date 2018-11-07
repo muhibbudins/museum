@@ -13,11 +13,11 @@
   },
   "every-10-seconds": {
     "text": "At every 10 seconds",
-    "value": "10 * * * * *"
+    "value": "*/10 * * * * *"
   },
   "every-30-seconds": {
     "text": "At every 30 seconds",
-    "value": "30 * * * * *"
+    "value": "*/30 * * * * *"
   },
   "every-minute": {
     "text": "At every minute",
