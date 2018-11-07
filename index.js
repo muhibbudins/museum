@@ -18,19 +18,17 @@ class Cronodile {
 		this.options = Object.assign(config, options)
 	}
 
-	fromFile(filePath) {
-		const file = require(filePath)
-
-		if (typeof file === "undefined") throw new Error('Invalid file path')
-		if (typeof file !== "function") throw new Error('Invalid function')
-
-		this.command = file
-		return this
-	}
-
 	command(command) {
-		this.command = command
-		return this
+		if (typeof command === "function") {
+			this.command = command
+			return this
+		} else if (typeof command === "string") {
+			this.command = require(command)
+			return this
+		} else {
+			console.info('Command type unsupported')
+			process.exit(1)
+		}
 	}
 
 	run(time) {
@@ -40,7 +38,8 @@ class Cronodile {
 			const cronCommand = (typeof time === "string") ? dictionary[cronTime] : cronTime
 			const cronFunction = () => {
 				console.log(`[Cronodile] Command ${cronCommand.text} at ${new Date().toLocaleTimeString()}`)
-				this.command()
+			
+				this.command.bind(this)(this.api)
 			}
 
 			this.api = new CronJob(cronCommand.value, cronFunction, null, true, this.options['timezone'])
