@@ -25,14 +25,14 @@ module.exports = {
         */
         "EVERY_10_SECONDS": {
             text: "At every 10 seconds",
-            value: "10 * * * * *"
+            value: "*/10 * * * * *"
         },
         /**
         * @description At every 30 seconds
         */
         "EVERY_30_SECONDS": {
             text: "At every 30 seconds",
-            value: "30 * * * * *"
+            value: "*/30 * * * * *"
         },
         /**
         * @description At every minute
