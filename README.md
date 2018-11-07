@@ -16,19 +16,32 @@ And then, create code like this
 // Import Cronodile
 const Cronodile = require('cronodile')
 // Create Cronodile instance
-const cron = new Cronodile('id')
+const jobOne = new Cronodile.create('id')
+const jobTwo = new Cronodile.create('en')
 
 cron
-  // Command must be Function
-  .command(() => {
+  // Command must be Function or String
+  .command((api) => {
     // Write your code here
     console.log('run your function / something here')
+    // Play with CronJob API
+    console.info(api.running)
   })
   // Run parameter must be a string
   .run('setiap menit')
+
+jobOne
+  // Command using require method 
+  .command('./example_file')
+  // RUn parameter using Cronodile time variable
+  .run(Cronodile.time.EVERY_10_SECONDS)
 ```
 
 ### Available Command
+
+> Note
+
+If your command parameter using Function you can access CronJob API by call `thi.api`, but when you write code using Arrow Function you must add paramater `api` on arrow function to access CronJob API. 
 
 > English
 
