@@ -8,6 +8,6 @@
   "license": "ISC",
   "dependencies": {
     "node-fetch": "^2.2.0",
-    "puppeteer": "^3.0.0"
+    "puppeteer": "^4.0.0"
   }
 }
